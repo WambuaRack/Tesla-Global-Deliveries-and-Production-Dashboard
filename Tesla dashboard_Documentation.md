@@ -1,4 +1,199 @@
 ### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:26:18 AM*
+
+**[REMOVED]**
+```
+(from line ~104)
+    fig1=px.bar(price_year,x='Region', y='Avg_Price_USD', color="Region", title="Total Price Per Region")
+    st.plotly_chart(fig1, use_container_width=True)
+```
+**[ADDED]**
+```
+104       fig3=px.bar(price_region,x='Region', y='Avg_Price_USD', color="Region", title="Total Price Per Region")
+105       st.plotly_chart(fig3, use_container_width=True)
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:25:21 AM*
+
+**[REMOVED]**
+```
+(from line ~104)
+    fig1=px.bar(price_year,x='Region', y='Avg_Price_USD', title="Total Price Per Year")
+    fig1.update_traces(line=dict(color ='yellow', width =3))
+
+```
+**[ADDED]**
+```
+104       fig1=px.bar(price_year,x='Region', y='Avg_Price_USD', color="Region", title="Total Price Per Region")
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:24:48 AM*
+
+**[REMOVED]**
+```
+(from line ~104)
+    fig1=px.bar(price_year,x='Region', y='Avg_Price_USD', markers=True,title="Total Price Per Year")
+
+```
+**[ADDED]**
+```
+104       fig1=px.bar(price_year,x='Region', y='Avg_Price_USD', title="Total Price Per Year")
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:24:16 AM*
+
+**[REMOVED]**
+```
+(from line ~103)
+    price_year =filtered.groupby('Region')['Avg_Price_USD'].sum().reset_index()
+    fig1=px.line(price_year,x='Region', y='Avg_Price_USD', markers=True,title="Total Price Per Year")
+
+```
+**[ADDED]**
+```
+103       price_region =filtered.groupby('Region')['Avg_Price_USD'].sum().reset_index()
+104       fig1=px.bar(price_year,x='Region', y='Avg_Price_USD', markers=True,title="Total Price Per Year")
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:24:00 AM*
+
+**[ADDED]**
+```
+100       st.plotly_chart(fig1, use_container_width=True)
+101       
+102   with c1:
+103       price_year =filtered.groupby('Region')['Avg_Price_USD'].sum().reset_index()
+104       fig1=px.line(price_year,x='Region', y='Avg_Price_USD', markers=True,title="Total Price Per Year")
+105       fig1.update_traces(line=dict(color ='yellow', width =3))
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:22:39 AM*
+
+**[REMOVED]**
+```
+(from line ~94)
+    fig1.update_traces(line=dict(color ='blue', width =3))
+
+```
+**[ADDED]**
+```
+94        fig1.update_traces(line=dict(color ='yellow', width =3))
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:22:16 AM*
+
+**[REMOVED]**
+```
+(from line ~96)
+with c1:
+
+```
+**[ADDED]**
+```
+96    with c2:
+```
+**[REMOVED]**
+```
+(from line ~99)
+    fig1.update_traces(line=dict(color ='blue', width =3))
+
+```
+**[ADDED]**
+```
+99        fig1.update_traces(line=dict(color ='red', width =3))
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:21:47 AM*
+
+**[REMOVED]**
+```
+(from line ~97)
+    prod_units =filtered.groupby('Year')['Avg_Price_USD'].sum().reset_index()
+    fig1=px.line(price_year,x='Year', y='Avg_Price_USD', markers=True,title="Total Price Per Year")
+
+```
+**[ADDED]**
+```
+97        prod_units =filtered.groupby('Year')['Production_Units'].sum().reset_index()
+98        fig1=px.line(prod_units,x='Year', y='Production_Units', markers=True,title="Total Price Per Year")
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:21:29 AM*
+
+**[ADDED]**
+```
+95        st.plotly_chart(fig1, use_container_width=True)
+96    with c1:
+97        prod_units =filtered.groupby('Year')['Avg_Price_USD'].sum().reset_index()
+98        fig1=px.line(price_year,x='Year', y='Avg_Price_USD', markers=True,title="Total Price Per Year")
+99        fig1.update_traces(line=dict(color ='blue', width =3))
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:19:30 AM*
+
+**[REMOVED]**
+```
+(from line ~88)
+    )
+```
+**[ADDED]**
+```
+88        )
+89        
+90    c1, c2 =st.columns(2)
+91    with c1:
+92        price_year =filtered.groupby('Year')['Avg_Price_USD'].sum().reset_index()
+93        fig1=px.line(price_year,x='Year', y='Avg_Price_USD', markers=True,title="Total Price Per Year")
+94        fig1.update_traces(line=dict(color ='blue', width =3))
+95        st.plotly_chart(fig1, use_container_width=True)
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:13:58 AM*
+
+**[REMOVED]**
+```
+(from line ~87)
+        
+
+```
+**[ADDED]**
+```
+87            delta="Top Region listing"
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
 *Saved at: 11/19/2025, 10:13:19 AM*
 
 **[REMOVED]**

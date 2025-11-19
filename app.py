@@ -84,5 +84,22 @@ with col3:
     st.metric(
         label="Top Region",
         value=f"{top_region}",
-        
+        delta="Top Region listing"
     )
+    
+c1, c2 =st.columns(2)
+with c1:
+    price_year =filtered.groupby('Year')['Avg_Price_USD'].sum().reset_index()
+    fig1=px.line(price_year,x='Year', y='Avg_Price_USD', markers=True,title="Total Price Per Year")
+    fig1.update_traces(line=dict(color ='yellow', width =3))
+    st.plotly_chart(fig1, use_container_width=True)
+with c2:
+    prod_units =filtered.groupby('Year')['Production_Units'].sum().reset_index()
+    fig1=px.line(prod_units,x='Year', y='Production_Units', markers=True,title="Total Price Per Year")
+    fig1.update_traces(line=dict(color ='red', width =3))
+    st.plotly_chart(fig1, use_container_width=True)
+    
+with c1:
+    price_region =filtered.groupby('Region')['Avg_Price_USD'].sum().reset_index()
+    fig3=px.bar(price_region,x='Region', y='Avg_Price_USD', color="Region", title="Total Price Per Region")
+    st.plotly_chart(fig3, use_container_width=True)
