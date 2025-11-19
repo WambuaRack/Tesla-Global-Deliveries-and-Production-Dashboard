@@ -34,10 +34,5 @@ selected_Month=st.sidebar.selectbox("Month", Month)
 
 Source_Type =["ALL"]+sorted(df['Source_Type'].dropna().unique().tolist())
 selected_Source_Type=st.sidebar.selectbox("Source Type", Source_Type)
-
-region =["ALL"]+sorted(df['Region'].dropna().unique().tolist())
-selected_region=st.sidebar.selectbox("Region", region)
-
-region =["ALL"]+sorted(df['Region'].dropna().unique().tolist())
-selected_region=st.sidebar.selectbox("Region", region)
-
+min_km, max_km =int(df["Range_km"].min()), int(df["Range_km"].max())
+KM_range =st.sidebar.slider("Kilometre Range", min_km,max_km,(min_km,max_km))

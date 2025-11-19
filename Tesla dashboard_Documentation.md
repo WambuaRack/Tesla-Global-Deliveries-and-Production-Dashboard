@@ -1,4 +1,43 @@
 ### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:37:14 AM*
+
+**[REMOVED]**
+```
+(from line ~37)
+min_km, max_km =int(df[""])
+
+```
+**[ADDED]**
+```
+37    min_km, max_km =int(df["Range_km"].min()), int(df["Range_km"].max())
+38    KM_range =st.sidebar.slider("Kilometre Range", min_km,max_km,(min_km,max_km))
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:35:17 AM*
+
+**[REMOVED]**
+```
+(from line ~37)
+
+region =["ALL"]+sorted(df['Region'].dropna().unique().tolist())
+selected_region=st.sidebar.selectbox("Region", region)
+
+region =["ALL"]+sorted(df['Region'].dropna().unique().tolist())
+selected_region=st.sidebar.selectbox("Region", region)
+
+
+```
+**[ADDED]**
+```
+37    min_km, max_km =int(df[""])
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
 *Saved at: 11/19/2025, 9:32:57 AM*
 
 **[REMOVED]**
