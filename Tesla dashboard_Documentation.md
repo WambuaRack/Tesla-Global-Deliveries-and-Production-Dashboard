@@ -1,4 +1,63 @@
 ### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:45:37 AM*
+
+**[REMOVED]**
+```
+(from line ~33)
+Source_Type=st.sidebar.selectbox("Month", Month)
+
+```
+**[ADDED]**
+```
+33    selected_Month=st.sidebar.selectbox("Month", Month)
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:45:04 AM*
+
+**[REMOVED]**
+```
+(from line ~33)
+selected_Month=st.sidebar.selectbox("Month", Month)
+
+```
+**[ADDED]**
+```
+33    Source_Type=st.sidebar.selectbox("Month", Month)
+```
+**[ADDED]**
+```
+37    
+```
+**[ADDED]**
+```
+40    
+41    ##applying filters
+42    filtered =df.copy()
+43    if selected_Model !="ALL":
+44        filtered=filtered[filtered["Model"]== selected_Model]
+45    if selected_region !="ALL":
+46        filtered=filtered[filtered["Region"]== selected_region]  
+47    
+48    if selected_Source_Type !="ALL":
+49        filtered=filtered[filtered["Source_Type"]== selected_Source_Type]  
+50        
+51    if selected_Month !="ALL":
+52        filtered=filtered[filtered["Month"]== selected_Month]  
+53        
+54    if selected_year !="ALL":
+55        filtered=filtered[filtered["Year"]== selected_year]  
+56    
+57    
+58    filtered=filtered[(filtered['Range_km']>=KM_range[0]) & (filtered['Range_km']<=KM_range[1])]
+59        
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
 *Saved at: 11/19/2025, 9:37:14 AM*
 
 **[REMOVED]**

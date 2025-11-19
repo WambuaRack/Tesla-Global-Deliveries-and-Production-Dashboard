@@ -34,5 +34,26 @@ selected_Month=st.sidebar.selectbox("Month", Month)
 
 Source_Type =["ALL"]+sorted(df['Source_Type'].dropna().unique().tolist())
 selected_Source_Type=st.sidebar.selectbox("Source Type", Source_Type)
+
 min_km, max_km =int(df["Range_km"].min()), int(df["Range_km"].max())
 KM_range =st.sidebar.slider("Kilometre Range", min_km,max_km,(min_km,max_km))
+
+##applying filters
+filtered =df.copy()
+if selected_Model !="ALL":
+    filtered=filtered[filtered["Model"]== selected_Model]
+if selected_region !="ALL":
+    filtered=filtered[filtered["Region"]== selected_region]  
+
+if selected_Source_Type !="ALL":
+    filtered=filtered[filtered["Source_Type"]== selected_Source_Type]  
+    
+if selected_Month !="ALL":
+    filtered=filtered[filtered["Month"]== selected_Month]  
+    
+if selected_year !="ALL":
+    filtered=filtered[filtered["Year"]== selected_year]  
+
+
+filtered=filtered[(filtered['Range_km']>=KM_range[0]) & (filtered['Range_km']<=KM_range[1])]
+    
