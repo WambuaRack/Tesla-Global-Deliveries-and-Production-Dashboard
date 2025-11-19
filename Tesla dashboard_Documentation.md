@@ -1,4 +1,451 @@
 ### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:13:19 AM*
+
+**[REMOVED]**
+```
+(from line ~69)
+lat_region = filtered["Region"].value_counts().idxmin()
+
+```
+**[REMOVED]**
+```
+(from line ~87)
+        delta=f"Bottom Region {lat_region}"
+
+```
+**[ADDED]**
+```
+87            
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:12:55 AM*
+
+**[REMOVED]**
+```
+(from line ~88)
+        delta=f"Region {top_models}"
+
+```
+**[ADDED]**
+```
+88            delta=f"Bottom Region {lat_region}"
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:12:29 AM*
+
+**[REMOVED]**
+```
+(from line ~68)
+top_models = filtered["Model"].value_counts().nlargest(1)
+
+```
+**[ADDED]**
+```
+69    lat_region = filtered["Region"].value_counts().idxmin()
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:11:09 AM*
+
+**[REMOVED]**
+```
+(from line ~86)
+        label="Top Models",
+        value=f"{top_models}",
+        delta=f"Region {top_region}"
+
+```
+**[ADDED]**
+```
+86            label="Top Region",
+87            value=f"{top_region}",
+88            delta=f"Region {top_models}"
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:09:59 AM*
+
+**[REMOVED]**
+```
+(from line ~68)
+top_models = filtered["Model"].value_counts().nlargest()
+
+```
+**[ADDED]**
+```
+68    top_models = filtered["Model"].value_counts().nlargest(1)
+```
+**[REMOVED]**
+```
+(from line ~87)
+        value={top_models},
+
+```
+**[ADDED]**
+```
+87            value=f"{top_models}",
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:09:31 AM*
+
+**[REMOVED]**
+```
+(from line ~87)
+        value=f"{top_models}",
+
+```
+**[ADDED]**
+```
+87            value={top_models},
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:09:08 AM*
+
+**[REMOVED]**
+```
+(from line ~68)
+top_models = filtered["Model"].value_counts().nlargest(5)
+
+```
+**[ADDED]**
+```
+68    top_models = filtered["Model"].value_counts().nlargest()
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:08:39 AM*
+
+**[REMOVED]**
+```
+(from line ~80)
+        value=f"KM {avg_mileage:,.0f}",
+
+```
+**[ADDED]**
+```
+80            value=f"Km {avg_mileage:,.0f}",
+```
+**[REMOVED]**
+```
+(from line ~83)
+        
+        
+
+```
+**[ADDED]**
+```
+84    with col3:
+85        st.metric(
+86            label="Top Models",
+87            value=f"{top_models}",
+88            delta=f"Region {top_region}"
+89        )
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:06:47 AM*
+
+**[REMOVED]**
+```
+(from line ~81)
+        delta=f"Max mileage:{max_mileage} Min mileage {min_mileage}",
+
+```
+**[ADDED]**
+```
+81            delta=f"Max mileage:{max_mileage}   Min mileage {min_mileage}",
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:06:03 AM*
+
+**[ADDED]**
+```
+77    with col2:
+78        st.metric(
+79            label=" Average Mileage (KM)",
+80            value=f"KM {avg_mileage:,.0f}",
+81            delta=f"Max mileage:{max_mileage} Min mileage {min_mileage}",
+82            
+83            
+84            
+85        )
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:02:15 AM*
+
+**[REMOVED]**
+```
+(from line ~63)
+avg_price =filtered['Avg_Price_USD']
+
+```
+**[ADDED]**
+```
+63    avg_price =filtered['Avg_Price_USD'].mean()
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 10:01:14 AM*
+
+**[REMOVED]**
+```
+(from line ~74)
+    st.metric("Avg Sales Price (USD)", f"${avg_price:,.0f}", delta=f"Max: ${max_price:,.0f}")
+
+```
+**[ADDED]**
+```
+74        st.metric(label="Avg Sales Price (USD)",
+75        value=f"${avg_price:,.0f}",
+76        delta=f"Max: ${max_price:,.0f}",)
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:59:26 AM*
+
+**[REMOVED]**
+```
+(from line ~74)
+    st.metric("AVG price (USD)", f"${avg_price:,.2f}", delta=f"Max: ${max_price}")
+```
+**[ADDED]**
+```
+74        st.metric("Avg Sales Price (USD)", f"${avg_price:,.0f}", delta=f"Max: ${max_price:,.0f}")
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:58:18 AM*
+
+**[REMOVED]**
+```
+(from line ~74)
+    st.metric("AVG price (USD)", f"${avg_price:.2f}", delta=f"Max: ${max_price}")
+```
+**[ADDED]**
+```
+74        st.metric("AVG price (USD)", f"${avg_price:,.2f}", delta=f"Max: ${max_price}")
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:57:57 AM*
+
+**[REMOVED]**
+```
+(from line ~74)
+    st.metric("AVG price (USD)", f"${avg_price}", delta=f"Max: ${max_price}")
+```
+**[ADDED]**
+```
+74        st.metric("AVG price (USD)", f"${avg_price:.2f}", delta=f"Max: ${max_price}")
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:57:16 AM*
+
+**[REMOVED]**
+```
+(from line ~74)
+    st.metric("AVG price (USD)", f"${avg_price:,.0f}", delta=f"${max_price:, .0f}")
+```
+**[ADDED]**
+```
+74        st.metric("AVG price (USD)", f"${avg_price}", delta=f"Max: ${max_price}")
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:55:40 AM*
+
+**[REMOVED]**
+```
+(from line ~74)
+    st.metric("AVG price (USD)", f"${avg_price:,.0f}", delta=)
+```
+**[ADDED]**
+```
+74        st.metric("AVG price (USD)", f"${avg_price:,.0f}", delta=f"${max_price:, .0f}")
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:54:41 AM*
+
+**[REMOVED]**
+```
+(from line ~71)
+st.write("#### 🔑 Key Performance Indicators")
+```
+**[ADDED]**
+```
+71    st.write("#### 🔑 Key Performance Indicators")
+72    col1,col2,col3 =st.columns(3)
+73    with col1:
+74        st.metric("AVG price (USD)", f"${avg_price:,.0f}", delta=)
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:51:39 AM*
+
+**[REMOVED]**
+```
+(from line ~70)
+top_colors = filtered["Color"].value_counts().nlargest(3)
+
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:51:29 AM*
+
+**[REMOVED]**
+```
+(from line ~70)
+top_colors = filtered["Color"].value_counts().nlargest(3)
+```
+**[ADDED]**
+```
+70    top_colors = filtered["Color"].value_counts().nlargest(3)
+71    
+72    st.write("#### 🔑 Key Performance Indicators")
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:51:09 AM*
+
+**[REMOVED]**
+```
+(from line ~67)
+max_mileage = filtered["Range_km"].max()
+```
+**[ADDED]**
+```
+67    max_mileage = filtered["Range_km"].max()
+68    top_models = filtered["Model"].value_counts().nlargest(5)
+69    top_region = filtered["Region"].value_counts().idxmax()
+70    top_colors = filtered["Color"].value_counts().nlargest(3)
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:50:39 AM*
+
+**[REMOVED]**
+```
+(from line ~65)
+avg_mileage = filtered["Mileage_KM"].mean()
+min_mileage = filtered["Mileage_KM"].min()
+max_mileage = filtered["Mileage_KM"].max()
+```
+**[ADDED]**
+```
+65    avg_mileage = filtered["Range_km"].mean()
+66    min_mileage = filtered["Range_km"].min()
+67    max_mileage = filtered["Range_km"].max()
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:50:11 AM*
+
+**[ADDED]**
+```
+65    avg_mileage = filtered["Mileage_KM"].mean()
+66    min_mileage = filtered["Mileage_KM"].min()
+67    max_mileage = filtered["Mileage_KM"].max()
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:49:52 AM*
+
+**[ADDED]**
+```
+64    max_price =filtered['Avg_Price_USD'].max()
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:47:58 AM*
+
+**[REMOVED]**
+```
+(from line ~63)
+avg_price =filtered['']
+```
+**[ADDED]**
+```
+63    avg_price =filtered['Avg_Price_USD']
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
+*Saved at: 11/19/2025, 9:47:05 AM*
+
+**[REMOVED]**
+```
+(from line ~59)
+    
+```
+**[ADDED]**
+```
+59        
+60        
+61        ##Metrics kpis
+62        
+63    avg_price =filtered['']
+```
+
+---
+
+### 📄 c:\Users\Administrator\Desktop\Tesla dashboard\app.py
 *Saved at: 11/19/2025, 9:45:37 AM*
 
 **[REMOVED]**
